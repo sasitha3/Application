@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Secret PIN</string>
     <string name="title_activity_description">DescriptionActivity</string>
     <string name="rating_prompt">Product Rating %1$d</string>
     <string name="title_activity_login">Sign in</string>
@@ -19,9 +19,11 @@
     <string name="pin1">pin</string>
     <string name="account_name">account</string>
     <string name="descriptiontext">description</string>
-    <string name="pintext">pintext</string>
+    <string name="pintext">pin text</string>
     <string name="name">name</string>
     <string name="title">Save your pin</string>
     <string name="bt_save">save</string>
     <string name="bt_list">PIN LIST</string>
+    <string name="btn_list_view">PIN LIST</string>
+    <string name="btn_insert">INSERT PIN</string>
 </resources>

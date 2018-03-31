@@ -16,7 +16,6 @@ public class PinCreateActivity extends AppCompatActivity {
 
     DBManager dbManager;
     private Button bt_save;
-    private Button btn_list;
     private EditText account_name;
     private EditText pin;
     private EditText description;
@@ -27,7 +26,7 @@ public class PinCreateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pin_create);
 
         bt_save = (Button)findViewById(R.id.bt_save);
-        btn_list = (Button)findViewById(R.id.btn_list);
+
         account_name = (EditText)findViewById(R.id.account_name);
         pin = (EditText)findViewById(R.id.pin1);
         description = (EditText)findViewById(R.id.description);
@@ -50,26 +49,9 @@ public class PinCreateActivity extends AppCompatActivity {
             }
         });
 
-        btn_list.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-                changingUI();
-//                Intent intent = new Intent(this, MainActivity.class);
-//                PinCreateActivity.this.startActivity(intent);
-//                Log.d("Button list","inside button click");
-            }
-        });
     }
 
-    /**
-     * change the UI to List View
-     */
-    public void changingUI(){
-        Intent listView = new Intent(this, MainActivity.class);
-        startActivity(listView);
-    }
     public void addData(String account_name, String pin, String description){
         boolean result = dbManager.saveData(account_name,pin,description);
 
