@@ -1,6 +1,8 @@
 package com.varunarl.myapplication.ui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,10 +59,28 @@ public class PinCreateActivity extends AppCompatActivity {
 
         if(result){
             showMessage("Successfully saved!");
+            alertMessage("Successfully saved!");
         }else {
+            alertMessage("Error saving data!");
             showMessage("Error saving data!");
         }
 
+    }
+
+    public void alertMessage(String message){
+        AlertDialog.Builder aBuilder = new AlertDialog.Builder(PinCreateActivity.this);
+        aBuilder.setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = aBuilder.create();
+        alert.setTitle("Pin Insert");
+        alert.show();
     }
     private void showMessage(String message){
         Toast.makeText(this,message,Toast.LENGTH_SHORT);
