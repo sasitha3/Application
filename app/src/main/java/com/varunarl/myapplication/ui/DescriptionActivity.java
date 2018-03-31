@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.varunarl.myapplication.R;
-import com.varunarl.myapplication.core.Pins;
-import com.varunarl.myapplication.data.PinDetails;
 
 public class DescriptionActivity extends AppCompatActivity {
 
@@ -18,15 +16,13 @@ public class DescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        int id = getIntent().getExtras().getInt("data");
-
-        Pins pins = new Pins();
-        PinDetails pinDetails = pins.getBrand(id);
+        String pin = getIntent().getExtras().getString("pin");
+        String description = getIntent().getExtras().getString("description");
 
         mTextView1 = findViewById(R.id.text1);
         mTextView2 = findViewById(R.id.text2);
 
-        mTextView1.setText(pinDetails.getDescription());
-        mTextView2.setText("Rating : " + pinDetails.getId());
+        mTextView1.setText("Pin " + pin);
+        mTextView2.setText(description);
     }
 }

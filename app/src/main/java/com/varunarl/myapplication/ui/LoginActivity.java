@@ -3,10 +3,12 @@ package com.varunarl.myapplication.ui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -85,18 +87,46 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+            Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 //                attemptLogin();
-                loginPage();
+                String email = mEmailView.getText().toString();
+                String password = mPasswordView.getText().toString();
+                if(email.equals("ctse@sliit.com") && password.equals("SLIIT")){
+                    alertMessage("Login Successfully !");
+                    loginPage();
+                } else {
+                    alertMessage("Login Fail !");
+                }
+
 
             }
         });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    /**
+     * Alert method
+     * @param message
+     */
+    public void alertMessage(String message){
+        AlertDialog.Builder aBuilder = new AlertDialog.Builder(LoginActivity.this);
+        aBuilder.setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = aBuilder.create();
+        alert.setTitle("Pin Insert Login");
+        alert.show();
     }
 
     public void loginPage(){

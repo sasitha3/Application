@@ -15,7 +15,7 @@ import com.varunarl.myapplication.R;
 import java.util.List;
 
 /**
- * Created by varunarl on 3/10/18.
+ * Created by sasitha on 3/10/18.
  */
 
 public class MyListAdapter extends ArrayAdapter {
@@ -37,10 +37,8 @@ public class MyListAdapter extends ArrayAdapter {
                                 .inflate(resourceId,null);
         }
         TextView tv1 = convertView.findViewById(android.R.id.text1);
-        TextView tv2 = convertView.findViewById(android.R.id.text2);
 
         tv1.setText(pinDetails.getAccountName());
-        tv2.setText(getContext().getResources().getString(R.string.rating_prompt, pinDetails.getId()));
         convertView.setTag(pinDetails.getId());
 
         return convertView;

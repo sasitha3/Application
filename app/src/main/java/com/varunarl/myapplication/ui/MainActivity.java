@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Intent intent = new Intent(this, DescriptionActivity.class);
-        intent.putExtra("data", rawData.get(i).getId());
+        intent.putExtra("pin", rawData.get(i).getPin());
+        intent.putExtra("description", rawData.get(i).getDescription());
         MainActivity.this.startActivity(intent);
     }
 }

@@ -9,23 +9,22 @@
     <Button
         android:id="@+id/btn_create"
         style="?android:textAppearanceSmall"
-        android:layout_width="378dp"
+        android:layout_width="362dp"
         android:layout_height="192dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/btn_insert"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_list"
         style="?android:textAppearanceSmall"
-        android:layout_width="382dp"
-        android:layout_height="205dp"
+        android:layout_width="362dp"
+        android:layout_height="192dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
