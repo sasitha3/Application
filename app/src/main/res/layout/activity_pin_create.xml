@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.varunarl.myapplication.ui.PinCreateActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="391dp"
+        android:layout_height="36dp"
+        android:text="@string/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/pintext"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/pintext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/descriptiontext"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/descriptiontext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pintext" />
+
+    <EditText
+        android:id="@+id/account_name"
+        android:layout_width="213dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:labelFor="@id/account_name"
+        android:text="@string/account_name"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/pin1"
+        android:layout_width="213dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="text"
+        android:labelFor="@id/pin1"
+        android:text="@string/pin1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pintext"
+        app:layout_constraintTop_toBottomOf="@+id/account_name" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="211dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:labelFor="@id/description"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/descriptiontext"
+        app:layout_constraintTop_toBottomOf="@+id/pin1" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="222dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/bt_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_list"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_list"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="457dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
