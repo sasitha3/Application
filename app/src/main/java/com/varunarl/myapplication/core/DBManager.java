@@ -1,7 +1,7 @@
 package com.varunarl.myapplication.core;
 
 /**
- * Created by USER on 3/26/2018.
+ * Created by achini on 3/26/2018.
  */
 
 import android.content.ContentValues;
@@ -28,11 +28,7 @@ public class DBManager extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        String createTable = "CREATE TABLE"+TABLE_NAME+"(_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
-//                col2+"TEXT,"+
-//                col3+"TEXT,"+
-//                col4+"TEXT)";
-        String createTable = "CREATE TABLE accounts (id integer PRIMARY KEY AUTOINCREMENT, account_name text, pin text,description text )";
+        String createTable = "CREATE TABLE "+ TABLE_NAME +" ("+ col1 +" integer PRIMARY KEY AUTOINCREMENT, "+ col2 +" text, "+ col3 +" text,"+ col4 +" text )";
         db.execSQL(createTable);
     }
 
@@ -41,6 +37,13 @@ public class DBManager extends SQLiteOpenHelper{
 
     }
 
+    /**
+     * Saving Data to the database
+     * @param account_name
+     * @param pin
+     * @param description
+     * @return
+     */
     public boolean saveData(String account_name,String pin,String description){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -58,6 +61,10 @@ public class DBManager extends SQLiteOpenHelper{
         }
     }
 
+    /**
+     * View data from the database
+     * @return
+     */
     public Cursor readAll(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cur = db.rawQuery("SELECT * FROM accounts", null);
