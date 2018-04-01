@@ -22,6 +22,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:text="@string/name"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -32,6 +33,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:text="@string/pintext"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -42,6 +44,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:text="@string/descriptiontext"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pintext" />
 
@@ -53,10 +56,10 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:ems="10"
+        android:hint="@string/account_name"
         android:inputType="textPersonName"
         android:labelFor="@id/account_name"
-        android:text="@string/account_name"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -69,10 +72,10 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:ems="10"
+        android:hint="@string/pin1"
         android:inputType="text"
         android:labelFor="@id/pin1"
-        android:text="@string/pin1"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pintext"
         app:layout_constraintTop_toBottomOf="@+id/account_name" />
@@ -85,9 +88,10 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:ems="10"
+        android:hint="@string/descriptiontext"
         android:inputType="textMultiLine"
         android:labelFor="@id/description"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/descriptiontext"
         app:layout_constraintTop_toBottomOf="@+id/pin1" />
@@ -99,7 +103,6 @@
         android:layout_marginBottom="222dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="30dp"
-        android:background="@android:color/holo_green_light"
         android:text="@string/bt_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

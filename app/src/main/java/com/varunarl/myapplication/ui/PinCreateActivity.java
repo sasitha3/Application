@@ -1,11 +1,9 @@
 package com.varunarl.myapplication.ui;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +52,12 @@ public class PinCreateActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Adding data
+     * @param account_name
+     * @param pin
+     * @param description
+     */
     public void addData(String account_name, String pin, String description){
         boolean result = dbManager.saveData(account_name,pin,description);
 
@@ -67,6 +71,10 @@ public class PinCreateActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * alert to show as messages
+     * @param message
+     */
     public void alertMessage(String message){
         AlertDialog.Builder aBuilder = new AlertDialog.Builder(PinCreateActivity.this);
         aBuilder.setMessage(message)

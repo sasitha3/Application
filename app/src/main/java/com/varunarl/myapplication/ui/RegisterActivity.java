@@ -35,11 +35,17 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * redirecting to the list page
+     */
     public void changingToList(){
         Intent listView = new Intent(this, MainActivity.class);
         startActivity(listView);
     }
 
+    /**
+     * redirecting to the insert page
+     */
     public void changingToInsert(){
         Intent listView = new Intent(this, PinCreateActivity.class);
         startActivity(listView);

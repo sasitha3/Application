@@ -22,7 +22,7 @@ public class DescriptionActivity extends AppCompatActivity {
         mTextView1 = findViewById(R.id.text1);
         mTextView2 = findViewById(R.id.text2);
 
-        mTextView1.setText("Pin " + pin);
+        mTextView1.setText("Pin : " + pin);
         mTextView2.setText(description);
     }
 }

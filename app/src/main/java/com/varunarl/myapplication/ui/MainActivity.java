@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import com.varunarl.myapplication.core.DBManager;
 import com.varunarl.myapplication.data.PinDetails;
-import com.varunarl.myapplication.core.Pins;
 import com.varunarl.myapplication.data.MyListAdapter;
 import com.varunarl.myapplication.R;
 
@@ -35,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         databaseHelper = new DBManager(this);
 
         Cursor data = databaseHelper.readAll();
+
         while (data.moveToNext()){
             pin = new PinDetails();
             pin.setId(data.getInt(0));
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             pin.setPin(data.getString(2));
             pin.setDescription(data.getString(3));
             rawData.add(pin);
-        }
+        }//read from the sqlit data base
         lv.setOnItemClickListener(this);
 
         simpleAdapter = new MyListAdapter( this, rawData);
